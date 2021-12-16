@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Твой ортодонт</title>
+    <style>
+        @font-face {
+            font-family: 'Averta'; /* Имя шрифта */
+            src: url('Averta Cyrillic Regular_0.otf'); /* Путь к файлу со шрифтом */
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+            min-height: 100vh;
+            color: #ddd;
+            font-family: 'Averta', sans-serif;
+        }
+
+        .container {
+            width: 500px;
+            max-width: 100%;
+            padding: 0 8px;
+        }
+
+        .logo {
+            max-width: 100%;
+            margin-bottom: 32px;
+            opacity: 0; /*Элемент полностью прозрачный (невидимый)*/
+            transform: translateY(20px);
+            transition: opacity .3s, transform: .3s ease-out; /*Скорость перехода состояния элемента*/
+            animation: show 1s 1; /* Указываем название анимации, её время и количество повторов*/
+            animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
+            animation-delay: .2s;  /*Задержка перед началом*/ 
+        }
+
+        .phone {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            font-size: 26px;
+            margin-bottom: 24px;
+
+            opacity: 0; /*Элемент полностью прозрачный (невидимый)*/
+            transform: translateY(20px);
+            transition: opacity .3s, transform: .3s ease-out; /*Скорость перехода состояния элемента*/
+            animation: show 1s 1; /* Указываем название анимации, её время и количество повторов*/
+            animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
+            animation-delay: 1s;  /*Задержка перед началом*/ 
+        }
+
+        .phone img {
+            width: 30px;
+            margin-right: 16px;
+        }
+
+        @keyframes show{
+            0%{
+                opacity:0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity:1;
+                transform: translateY(0px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="logo" src="logo.svg" alt="">
+        <div class="phone">
+            <img src="phone.svg" alt="">
+            291-333-6
+        </div>
+        <div class="phone">
+            <img src="location.svg" alt="">
+            <div>г. Сочи, ул. Гагарина 5,<br>
+            отель "Звездный", офис 51.</div>
+        </div>
+    </div>
+</body>
+</html>
