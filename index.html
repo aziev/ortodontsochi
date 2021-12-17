@@ -20,6 +20,10 @@
             font-family: 'Averta', sans-serif;
         }
 
+        a {
+            color: #ddd;
+        }
+
         .container {
             width: 500px;
             max-width: 100%;
@@ -55,6 +59,8 @@
         .phone img {
             width: 30px;
             margin-right: 16px;
+            position: relative;
+                top: 2px;
         }
 
         @keyframes show{
@@ -67,6 +73,16 @@
                 transform: translateY(0px);
             }
         }
+
+        @media (max-width: 600px) {
+            .phone {
+                font-size: 20px;
+            }
+
+            .phone img {
+                width: 24px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -74,11 +90,11 @@
         <img class="logo" src="logo.svg" alt="">
         <div class="phone">
             <img src="phone.svg" alt="">
-            291-333-6
+            <a href="tel:+78622913336">291-333-6</a>
         </div>
         <div class="phone">
             <img src="location.svg" alt="">
-            <div>г. Сочи, ул. Гагарина 5,<br>
+            <div>г. Сочи, <span style="white-space: nowrap;">ул. Гагарина 5,</span><br>
             отель "Звездный", офис 51.</div>
         </div>
     </div>
